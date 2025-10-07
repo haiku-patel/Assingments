@@ -6,11 +6,14 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Example bean definition -->
-    <bean id="messageService" class="com.example.springioc.MessageService">
-        <constructor-arg value="Hello, Spring configuration!"/>
+    <!-- Email service bean -->
+    <bean id="emailService" class="com.example.springioc.EmailService">
+        <property name="message" value="Hello from Email Service!"/>
     </bean>
-<bean id="setterMessageService" class="com.example.springioc.MessageService">
-    <property name="message" value="Hello from setter injection!"/>
-</bean>
+
+    <!-- SMS service bean -->
+    <bean id="smsService" class="com.example.springioc.SMSService">
+        <property name="message" value="Hello from SMS Service!"/>
+    </bean>
 
 </beans>
